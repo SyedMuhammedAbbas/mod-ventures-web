@@ -1,3 +1,3 @@
-import { Width, FloorDimensions } from "./Constants";
+import { Width, FloorDimensions, CloudsDimensions } from "./Constants";
 
-export { Width, FloorDimensions };
+export { Width, FloorDimensions, CloudsDimensions };

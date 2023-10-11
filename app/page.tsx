@@ -8,6 +8,8 @@ import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
 import { Layer1, Layer2, Layer3, Layer4, Layer5 } from "@/components/Landing";
 import { Cloud1, Drone } from "@/assets/images";
 import { Navbar } from "@/components/Navbar";
+import { CloudsDimensions } from "@/components/Styles";
+import { SmallCloudDimensions } from "@/components/Styles/Constants";
 
 // const url = (name: string, wrap = false) =>
 //   `${
@@ -51,16 +53,18 @@ export default function Home() {
           <Image
             src={Cloud1}
             layout="intrinsic"
-            width={220}
-            height={220}
+            // width={220}
+            // height={220}
+            className={`${CloudsDimensions}`}
             style={{ display: "block", marginLeft: "5%" }}
             alt={""}
           />
           <Image
             src={Cloud1}
             layout="intrinsic"
-            width={165}
-            height={165}
+            // width={165}
+            // height={165}
+            className={`${CloudsDimensions}`}
             style={{ display: "block", marginLeft: "75%" }}
             alt={""}
           />
@@ -74,9 +78,10 @@ export default function Home() {
           <Image
             src={Drone}
             layout="intrinsic"
-            width={170}
-            height={170}
-            style={{ marginLeft: "20%" }}
+            // width={170}
+            // height={170}
+            className="w-[50px] ml-[5%] lg:ml-[7%] xl:ml-[15%] 2xl:ml-[17%] sm:w-[70px] lg:w-[90px] 2xl:w-[120px] aspect-auto z-[99999]"
+            // style={{ marginLeft: "20%" }}
             alt={""}
           />
         </ParallaxLayer>
@@ -85,16 +90,18 @@ export default function Home() {
           <Image
             src={Cloud1}
             layout="intrinsic"
-            width={220}
-            height={220}
+            // width={220}
+            // height={220}
+            className={`${CloudsDimensions}`}
             style={{ display: "block", marginLeft: "55%" }}
             alt={""}
           />
           <Image
             src={Cloud1}
             layout="intrinsic"
-            width={110}
-            height={110}
+            // width={110}
+            // height={110}
+            className={`${SmallCloudDimensions}`}
             style={{ display: "block", marginLeft: "15%" }}
             alt={""}
           />
@@ -165,20 +172,22 @@ export default function Home() {
           />
         </ParallaxLayer> */}
 
-        <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
+        <ParallaxLayer offset={2} speed={0.4} style={{ opacity: 0.6 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
-            width={220}
-            height={220}
+            // width={220}
+            // height={220}
+            className={`${CloudsDimensions}`}
             style={{ display: "block", marginLeft: "5%" }}
             alt={""}
           />
           <Image
             src={Cloud1}
             layout="intrinsic"
-            width={165}
-            height={165}
+            // width={165}
+            // height={165}
+            className={`${SmallCloudDimensions}`}
             style={{ display: "block", marginLeft: "75%" }}
             alt={""}
           />
@@ -286,7 +295,9 @@ export default function Home() {
             height={132}
             alt={""}
           /> */}
-          <Layer1 />
+          <div className="pb-[5%]">
+            <Layer1 />
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -306,7 +317,9 @@ export default function Home() {
             height={264}
             alt={""}
           /> */}
-          <Layer2 />
+          <div className="my-[5%]">
+            <Layer2 />
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -326,13 +339,15 @@ export default function Home() {
             height={264}
             alt={""}
           /> */}
-          <Layer3 />
+          <div className="my-[5%]">
+            <Layer3 />
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer
           offset={1.8}
           speed={0.4}
-          onClick={() => parallax.current.scrollTo(2.4)}
+          onClick={() => parallax.current.scrollTo(2)}
           style={{
             display: "flex",
             alignItems: "center",
@@ -346,7 +361,9 @@ export default function Home() {
             height={264}
             alt={""}
           /> */}
-          <Layer4 />
+          <div className="mt-[10%]">
+            <Layer4 />
+          </div>
         </ParallaxLayer>
 
         <ParallaxLayer
@@ -366,7 +383,9 @@ export default function Home() {
             height={264}
             alt={""}
           /> */}
-          <Layer5 />
+          <div className="my-[5%]">
+            <Layer5 />
+          </div>
         </ParallaxLayer>
       </Parallax>
     </div>
