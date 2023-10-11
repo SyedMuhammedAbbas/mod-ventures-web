@@ -2,26 +2,221 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.cloud {
+  transform: translate(0%, 0%);
+  animation: cloudAnimation 3s infinite alternate;
+}
+
+@keyframes cloudAnimation {
+  0% {
+    transform: translate(0%, 0%);
+  }
+  50% {
+    transform: translate(0%, 5%);
+  }
+  100% {
+    transform: translate(0%, 0%);
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* .Ideas-Man-Items {
+  position: absolute;
+  bottom: 123px;
+  width: 103px;
+  left: 22px;
+  z-index: 99999;
+} */
+
+/* .From-selection-Women-Items {
+  position: absolute;
+  width: 35px;
+  bottom: 126px;
+  right: 67px;
+  z-index: 99999;
+  transform: scale(0); 
+  animation: popAnimation 0.5s forwards;
+} */
+
+@keyframes popAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#drone {
+  position: fixed;
+  width: 60px;
+  top: 45%;
+  left: 24%;
+  z-index: 9999;
+  animation: droneAnimation 5s infinite alternate; /* Adjust animation duration as needed */
+}
+
+@keyframes droneAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px); /* Adjust the animation distance */
+  }
+}
+
+.bird2 {
+  position: absolute;
+  animation: bird2move 6s infinite linear;
+}
+
+@keyframes bird2move {
+  0% {
+    transform: translateX(20vw);
+  }
+
+  100% {
+    transform: translateX(-50vw);
+  }
+}
+
+.bird {
+  position: absolute;
+  animation: circularMovement 6s infinite linear;
+}
+
+@keyframes circularMovement {
+  0% {
+    transform: translateX(-50vw);
+  }
+
+  100% {
+    transform: translateX(50vw);
+  }
+}
+
+.rotate-image {
+  position: absolute;
+  width: 51px;
+  top: 94px;
+  left: 172px;
+  /* animation: rotate 5s linear infinite; */
+  transform-origin: center;
+}
+
+.rotate-image2 {
+  position: absolute;
+  width: 68px;
+  top: 186px;
+  right: 201px;
+  animation: rotate 5s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+.oculus-animate {
+  position: absolute;
+  width: 10%;
+  top: 15%;
+  left: 40%;
+  z-index: 10000;
+  animation: fadeIn 1.2s ease-out infinite;
+  transform-origin: center;
+  opacity: 0; /* Initially hidden */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.cat-animate {
+  position: absolute;
+  width: 41px;
+  top: 108px;
+  left: 108px;
+  /* animation: catAnimate 2s ease-in-out infinite; */
+  transform-origin: center;
+}
+
+@keyframes catAnimate {
+  0% {
+    transform: rotateY(0deg);
+  }
+  25% {
+    transform: rotateY(90deg);
+  }
+  50% {
+    transform: rotateY(180deg);
+  }
+  75% {
+    transform: rotateY(270deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2); /* Adjust the scale factor as needed */
+  }
+}
+
+/* Apply the animation to the desired images */
+.scale-on-scroll {
+  animation: scaleAnimation 1s alternate infinite;
+}
+
+@keyframes zoomAnimation {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1); /* Zoom back to normal */
+  }
+}
+
+/* Apply the animation to the desired element */
+.card-animation {
+  animation: zoomAnimation 1s alternate;
+}
+
+.animation {
+  display: block;
+  position: relative;
+  width: 100vw;
+}
+
+.animation_layer {
+  /* background-position: bottom center;
+  background-repeat: repeat-x; */
+  width: 100%;
+  position: absolute;
 }
