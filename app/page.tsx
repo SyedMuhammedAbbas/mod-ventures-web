@@ -21,9 +21,9 @@ export default function Home() {
   return (
     <div
       // className="text-[#6d6d6d]"
-      style={{ width: "100%", height: "100%" }}
+      style={{ width: "100%", height: "100%", background: "#253237" }}
     >
-      <Parallax ref={parallax} pages={5}>
+      <Parallax ref={parallax} pages={3}>
         <Navbar />
         <ParallaxLayer
           offset={1}
@@ -67,7 +67,7 @@ export default function Home() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={1.3}
+          offset={0.7}
           speed={-0.3}
           style={{ pointerEvents: "none" }}
         >
@@ -100,7 +100,7 @@ export default function Home() {
           />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
+        {/* <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
@@ -117,9 +117,9 @@ export default function Home() {
             style={{ display: "block", marginLeft: "40%" }}
             alt={""}
           />
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
-        <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
+        {/* <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
@@ -136,9 +136,9 @@ export default function Home() {
             style={{ display: "block", marginLeft: "75%" }}
             alt={""}
           />
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
-        <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
+        {/* <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
@@ -163,7 +163,7 @@ export default function Home() {
             style={{ display: "block", marginLeft: "80%" }}
             alt={""}
           />
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
         <ParallaxLayer offset={2.6} speed={0.4} style={{ opacity: 0.6 }}>
           <Image
@@ -184,7 +184,7 @@ export default function Home() {
           />
         </ParallaxLayer>
 
-        <ParallaxLayer offset={3.6} speed={0.4} style={{ opacity: 0.6 }}>
+        {/* <ParallaxLayer offset={3.6} speed={0.4} style={{ opacity: 0.6 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
@@ -201,9 +201,9 @@ export default function Home() {
             style={{ display: "block", marginLeft: "75%" }}
             alt={""}
           />
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
-        <ParallaxLayer offset={4.6} speed={0.4} style={{ opacity: 0.6 }}>
+        {/* <ParallaxLayer offset={4.6} speed={0.4} style={{ opacity: 0.6 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
@@ -220,9 +220,9 @@ export default function Home() {
             style={{ display: "block", marginLeft: "75%" }}
             alt={""}
           />
-        </ParallaxLayer>
+        </ParallaxLayer> */}
 
-        <ParallaxLayer offset={5} speed={0.4} style={{ opacity: 0.6 }}>
+        {/* <ParallaxLayer offset={5} speed={0.4} style={{ opacity: 0.6 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
@@ -239,7 +239,7 @@ export default function Home() {
             style={{ display: "block", marginLeft: "75%" }}
             alt={""}
           />
-        </ParallaxLayer>
+        </ParallaxLayer> */}
         {/* <ParallaxLayer
           offset={2.5}
           speed={-0.4}
@@ -272,7 +272,7 @@ export default function Home() {
         <ParallaxLayer
           offset={0}
           speed={0.1}
-          onClick={() => parallax.current.scrollTo(1)}
+          onClick={() => parallax.current.scrollTo(0.6)}
           style={{
             display: "flex",
             alignItems: "center",
@@ -290,9 +290,9 @@ export default function Home() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={1}
-          speed={0.1}
-          onClick={() => parallax.current.scrollTo(2)}
+          offset={0.6}
+          speed={0.2}
+          onClick={() => parallax.current.scrollTo(1.2)}
           style={{
             display: "flex",
             alignItems: "center",
@@ -310,9 +310,9 @@ export default function Home() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={2}
-          speed={0.1}
-          onClick={() => parallax.current.scrollTo(3)}
+          offset={1.2}
+          speed={0.3}
+          onClick={() => parallax.current.scrollTo(1.8)}
           style={{
             display: "flex",
             alignItems: "center",
@@ -330,9 +330,9 @@ export default function Home() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={3}
-          speed={0.1}
-          onClick={() => parallax.current.scrollTo(4)}
+          offset={1.8}
+          speed={0.4}
+          onClick={() => parallax.current.scrollTo(2.4)}
           style={{
             display: "flex",
             alignItems: "center",
@@ -350,8 +350,8 @@ export default function Home() {
         </ParallaxLayer>
 
         <ParallaxLayer
-          offset={4}
-          speed={-0}
+          offset={2}
+          speed={0.5}
           style={{
             display: "flex",
             alignItems: "center",
