@@ -79,6 +79,9 @@ import Mod_Building from "./MOD-Building.png";
 
 import Logo from "./MOD-Building-PT2_0017_Logo.png";
 
+// services
+import Service from "./services/service_sample.png";
+
 export {
   BB_Logo,
   Bean_Bag_Man,
@@ -156,4 +159,5 @@ export {
   Mod_Building_Top,
   Mod_Building,
   Logo,
+  Service,
 };

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Layer29, Layer30, Layer30_1, Layer32_3 } from "@/assets/images";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
-import { FloorDimensions } from "../Styles";
+import { FloorDimensions } from "../../app/Styles";
 
 export const Layer5 = () => {
   const ref = useRef<HTMLDivElement>(null);

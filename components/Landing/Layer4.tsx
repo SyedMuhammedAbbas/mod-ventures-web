@@ -13,7 +13,7 @@ import {
 } from "@/assets/images";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
-import { FloorDimensions } from "../Styles";
+import { FloorDimensions } from "../../app/Styles";
 
 export const Layer4 = () => {
   const ref = useRef<HTMLDivElement>(null);

@@ -13,7 +13,7 @@ import {
   Monalisa,
   Table,
 } from "@/assets/images";
-import { FloorDimensions, Width } from "../Styles";
+import { FloorDimensions, Width } from "../../app/Styles";
 
 export const Layer2 = () => {
   const ref = useRef<HTMLDivElement>(null);

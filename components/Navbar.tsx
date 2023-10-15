@@ -3,7 +3,11 @@
 import Image from "next/image";
 import { Logo } from "@/assets/images";
 import Hamburger from "hamburger-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { motion } from "framer-motion";
+
+import { useScrollAnimation } from "@/hooks";
+import Link from "next/link";
 
 export const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
@@ -17,83 +21,39 @@ export const Navbar = () => {
     { heading: "Contact", route: "" },
   ];
 
-  const [scrollDirection, setScrollDirection] = useState<string>("");
-  const [lastScrollDirection, setLastScrollDirection] = useState<string>("");
+  const { controls, onTop } = useScrollAnimation();
 
-  useEffect(() => {
-    let lastScrollY = window.pageYOffset;
-
-    const updateScrollDirection = () => {
-      const scrollY = window.pageYOffset;
-      const direction = scrollY > lastScrollY ? "down" : "up";
-      if (
-        direction !== scrollDirection &&
-        (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)
-      ) {
-        setLastScrollDirection(scrollDirection);
-        setScrollDirection(direction);
-      }
-      lastScrollY = scrollY > 0 ? scrollY : 0;
-    };
-    window.addEventListener("scroll", updateScrollDirection); // add event listener
-    return () => {
-      window.removeEventListener("scroll", updateScrollDirection); // clean up
-    };
-  }, [scrollDirection]);
+  const variants = {
+    /** this is the "visible" key and it's respective style object **/
+    visible: { opacity: 1, y: 0 },
+    /** this is the "hidden" key and it's respective style object **/
+    hidden: { opacity: 0, y: -25 },
+  };
 
   return (
-    <header
-      className={`${
-        scrollDirection === "down" && lastScrollDirection === "up"
-          ? "top-[-90px]"
-          : " sticky transition-all ease-out duration-200 top-0 z-[99999] h-[60px] sm:h-[70px] md:h-[90px] items-center"
+    <motion.nav
+      variants={variants}
+      animate={controls}
+      /** I'm also going to add a custom easing curve and duration for the animation **/
+      transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
+      className={`sticky top-0 z-[99999] h-[60px] sm:h-[70px] md:h-[80px] flex items-center ${
+        onTop
+          ? "bg-transparent bg-opacity-0 backdrop-blur-0 shadow-none"
+          : "bg-black bg-opacity-5 backdrop-blur-xl shadow-md" // Apply background color when not at the top
       }`}
     >
       <div className="flex items-center justify-between w-full p-10">
-        <Image
-          src={Logo}
-          alt="logo"
-          className="w-[90px] aspect-auto md:w-[120px]"
-        />
+        <Link href={"/"}>
+          <Image
+            src={Logo}
+            alt="logo"
+            className="w-[60px] aspect-auto md:w-[100px]"
+          />
+        </Link>
         <div className="cursor-pointer relative">
           <Hamburger size={20} toggled={isOpen} toggle={setOpen} />
-          {/* <div className="absolute top-[19px] right-0 text-white w-[80px] bg-black text-[14px] flex-col gap-1 py-2 hidden group-hover:flex card-animation">
-          <h1 className="hover:bg-white hover:text-black text-[12px] px-3 py-1">
-            Home
-          </h1>
-          <a
-            href="about.html"
-            className="hover:bg-white hover:text-black text-[12px] px-3 py-1"
-          >
-            About us
-          </a>
-          <a
-            href="services.html"
-            className="hover:bg-white hover:text-black text-[12px] px-3 py-1"
-          >
-            Services
-          </a>
-          <a
-            href="projects.html"
-            className="hover:bg-white hover:text-black text-[12px] px-3 py-1"
-          >
-            Projects
-          </a>
-          <a
-            href="teams.html"
-            className="hover:bg-white hover:text-black text-[16px] px-3 py-1"
-          >
-            Teams
-          </a>
-          <a
-            href="contact.html"
-            className="hover:bg-white hover:text-black text-[16px] px-3 py-1"
-          >
-            Contact
-          </a>
-        </div> */}
         </div>
       </div>
-    </header>
+    </motion.nav>
   );
 };

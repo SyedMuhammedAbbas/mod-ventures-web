@@ -17,7 +17,7 @@ import {
 } from "@/assets/images";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
-import { Width, FloorDimensions } from "../Styles";
+import { Width, FloorDimensions } from "../../app/Styles";
 
 export const Layer1 = () => {
   const ref = useRef<HTMLDivElement>(null);
