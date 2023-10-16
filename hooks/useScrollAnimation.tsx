@@ -5,7 +5,7 @@ import { useAnimation } from "framer-motion";
 
 export const useScrollAnimation = (scrollThreshold = 50) => {
   const [hidden, setHidden] = useState(false);
-  const [onTop, setOnTop] = useState(false);
+  const [onTop, setOnTop] = useState(true);
   const controls = useAnimation();
 
   useEffect(() => {
@@ -14,14 +14,14 @@ export const useScrollAnimation = (scrollThreshold = 50) => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
 
-      if (scrollY > prevScrollY + scrollThreshold && !hidden) {
+      if (scrollY > prevScrollY && !hidden) {
         controls.start("hidden");
         setHidden(true);
-      } else if (scrollY <= prevScrollY - scrollThreshold && hidden) {
+      } else if (scrollY <= prevScrollY && hidden) {
         controls.start("visible");
         setHidden(false);
       }
-      if (scrollY < 10) {
+      if (scrollY < 2) {
         setOnTop(true);
       } else {
         setOnTop(false);

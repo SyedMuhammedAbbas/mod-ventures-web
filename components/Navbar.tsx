@@ -8,18 +8,10 @@ import { motion } from "framer-motion";
 
 import { useScrollAnimation } from "@/hooks";
 import Link from "next/link";
+import { Modal } from "./modal";
 
 export const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
-
-  const routes = [
-    { heading: "Home", route: "" },
-    { heading: "About us", route: "" },
-    { heading: "Services", route: "" },
-    { heading: "Projects", route: "" },
-    { heading: "Teams", route: "" },
-    { heading: "Contact", route: "" },
-  ];
 
   const { controls, onTop } = useScrollAnimation();
 
@@ -31,29 +23,35 @@ export const Navbar = () => {
   };
 
   return (
-    <motion.nav
-      variants={variants}
-      animate={controls}
-      /** I'm also going to add a custom easing curve and duration for the animation **/
-      transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
-      className={`sticky top-0 z-[99999] h-[60px] sm:h-[70px] md:h-[80px] flex items-center ${
-        onTop
-          ? "bg-transparent bg-opacity-0 backdrop-blur-0 shadow-none"
-          : "bg-black bg-opacity-5 backdrop-blur-xl shadow-md" // Apply background color when not at the top
-      }`}
-    >
-      <div className="flex items-center justify-between w-full p-10">
-        <Link href={"/"}>
-          <Image
-            src={Logo}
-            alt="logo"
-            className="w-[60px] aspect-auto md:w-[100px]"
-          />
-        </Link>
-        <div className="cursor-pointer relative">
-          <Hamburger size={20} toggled={isOpen} toggle={setOpen} />
+    <>
+      <motion.nav
+        variants={variants}
+        animate={controls}
+        /** I'm also going to add a custom easing curve and duration for the animation **/
+        transition={{ ease: [0.1, 0.25, 0.3, 1], duration: 0.6 }}
+        className={`sticky top-0 z-[60] h-[60px] sm:h-[70px] md:h-[80px] flex items-center ${
+          onTop
+            ? "bg-transparent bg-opacity-0 backdrop-blur-0 shadow-none"
+            : "bg-black bg-opacity-5 backdrop-blur-xl shadow-md" // Apply background color when not at the top
+        }`}
+      >
+        <div className="flex items-center justify-between w-full p-10">
+          <Link href={"/"}>
+            <Image
+              src={Logo}
+              alt="logo"
+              className="w-[60px] aspect-auto md:w-[100px]"
+            />
+          </Link>
+          <div
+            className="cursor-pointer relative z-[9999]"
+            style={{ zIndex: 71 }}
+          >
+            <Hamburger size={20} toggled={isOpen} toggle={setOpen} />
+          </div>
         </div>
-      </div>
-    </motion.nav>
+      </motion.nav>
+      {isOpen && <Modal isOpen={isOpen} />}
+    </>
   );
 };
