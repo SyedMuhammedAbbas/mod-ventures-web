@@ -25,7 +25,7 @@ export const Modal = ({ isOpen }: { isOpen: boolean }) => {
   ];
 
   return (
-    <div className="fixed flex justify-center items-center gap-6 flex-wrap bg-black bg-opacity-20 backdrop-blur-sm w-full h-full z-[70]">
+    <div className="fixed flex justify-center items-center gap-6 flex-wrap bg-black bg-opacity-20 backdrop-blur-lg w-full h-full z-[70]">
       {routes.map((route, index) => (
         <div key={index}>
           <PagesCard text={route.title} />
