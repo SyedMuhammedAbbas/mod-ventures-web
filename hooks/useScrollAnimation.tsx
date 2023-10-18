@@ -16,37 +16,43 @@ export const useScrollAnimation = (scrollThreshold = 50) => {
   let isLanding = pathname === "/";
 
   // Initialize prevScrollY using useRef
-  const prevScrollYRef = useRef(isLanding ? scrollPosition : window.scrollY);
+  const prevScrollYRef = useRef(isLanding ? scrollPosition : 0); // Initialize with 0
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = isLanding ? scrollPosition : window.scrollY;
+      if (typeof window !== "undefined") {
+        const scrollY = isLanding ? scrollPosition : window.scrollY;
 
-      if (scrollY > prevScrollYRef.current && !hidden) {
-        controls.start("hidden");
-        setHidden(true);
-      } else if (scrollY <= prevScrollYRef.current && hidden) {
-        controls.start("visible");
-        setHidden(false);
-      }
-      if (scrollY < 2) {
-        setOnTop(true);
-      } else {
-        setOnTop(false);
-      }
+        if (scrollY > prevScrollYRef.current && !hidden) {
+          controls.start("hidden");
+          setHidden(true);
+        } else if (scrollY <= prevScrollYRef.current && hidden) {
+          controls.start("visible");
+          setHidden(false);
+        }
+        if (scrollY < 2) {
+          setOnTop(true);
+        } else {
+          setOnTop(false);
+        }
 
-      // Update the value of prevScrollY using the ref
-      prevScrollYRef.current = scrollY;
+        // Update the value of prevScrollY using the ref
+        prevScrollYRef.current = scrollY;
+      }
     };
 
     if (isLanding) {
       handleScroll(); // Call it immediately when isLanding is true
     }
 
-    window.addEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+    }
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
     };
   }, [controls, hidden, scrollThreshold, onTop, scrollPosition, isLanding]);
 

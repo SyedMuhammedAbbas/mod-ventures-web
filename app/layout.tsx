@@ -1,7 +1,7 @@
 import { Navbar } from "@/components/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { NavbarContextProvider } from "@/context";
+import { NavbarContextProvider, ModalContextProvider } from "@/context";
 // import { Inter } from "next/font/google";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -18,12 +18,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <NavbarContextProvider>
-        <body>
-          <Navbar />
-          {children}
-        </body>
-      </NavbarContextProvider>
+      <ModalContextProvider>
+        <NavbarContextProvider>
+          <body>
+            <Navbar />
+            {children}
+          </body>
+        </NavbarContextProvider>
+      </ModalContextProvider>
     </html>
   );
 }

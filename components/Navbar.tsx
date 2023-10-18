@@ -9,9 +9,12 @@ import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks";
 import Link from "next/link";
 import { Modal } from "./modal";
+import { useModalContext } from "@/context";
 
 export const Navbar = () => {
-  const [isOpen, setOpen] = useState(false);
+  const { isOpen, setIsOpen } = useModalContext();
+
+  // const [isOpen, setOpen] = useState(false);
 
   const { controls, onTop } = useScrollAnimation();
 
@@ -22,6 +25,9 @@ export const Navbar = () => {
     hidden: { opacity: 0, y: -25 },
   };
 
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
   return (
     <>
       <motion.nav
@@ -47,7 +53,7 @@ export const Navbar = () => {
             className="cursor-pointer relative z-[9999]"
             style={{ zIndex: 71 }}
           >
-            <Hamburger size={20} toggled={isOpen} toggle={setOpen} />
+            <Hamburger size={20} toggled={isOpen} toggle={handleToggle} />
           </div>
         </div>
       </motion.nav>
