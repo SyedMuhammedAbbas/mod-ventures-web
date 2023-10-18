@@ -18,7 +18,10 @@ export const PagesCard = ({ text, path }: { text: string; path: string }) => {
       setTimeout(() => {
         // After 2 seconds, navigate to another page
         router.push(path); // Replace with your desired route
-      }, 2000);
+        setTimeout(() => {
+          setIsOpen(false);
+        }, 500);
+      }, 500);
     }
   };
 
@@ -27,7 +30,7 @@ export const PagesCard = ({ text, path }: { text: string; path: string }) => {
       // Automatically start the route transition after 2 seconds
       const routeTimeout = setTimeout(() => {
         router.push(path); // Replace with your desired route
-        setIsOpen(false);
+        // setIsOpen(false);
       }, 2000);
       return () => clearTimeout(routeTimeout);
     }

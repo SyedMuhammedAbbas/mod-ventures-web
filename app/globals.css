@@ -224,6 +224,7 @@
 .flip-card {
   perspective: 1000px;
   position: relative;
+  cursor: pointer;
 }
 
 .flip-card-inner {
