@@ -42,7 +42,7 @@ export const PagesCard = ({ text, path }: { text: string; path: string }) => {
         {isFlipped && (
           <motion.div
             key="loading"
-            className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-[#cccccc] z-50"
+            className="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-[#eeeeee] z-50"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
@@ -53,7 +53,7 @@ export const PagesCard = ({ text, path }: { text: string; path: string }) => {
         )}
       </AnimatePresence>
       <motion.div
-        className={`flip-card w-[150px] md:w-[200px] h-[180px] md:h-[230px] flex justify-center items-center bg-[#cccccc] drop-shadow-md rounded-[20px] ${
+        className={`flip-card w-[150px] md:w-[200px] h-[180px] md:h-[230px] flex justify-center items-center bg-[#eeeeee] drop-shadow-md rounded-[20px] ${
           isFlipped ? "flipped" : ""
         }`}
         initial={false}
@@ -63,10 +63,10 @@ export const PagesCard = ({ text, path }: { text: string; path: string }) => {
         onClick={handleFlip}
       >
         <div className="flip-card-inner rotate">
-          <div className="flip-card-front flex justify-center items-center w-[100%] h-[100%] bg-cover text-white rounded-[20px] p-4">
+          <div className="flip-card-front flex justify-center items-center w-[100%] h-[100%] bg-cover text-black text-[20px] font-bold rounded-[20px] p-4">
             <h1>{text}</h1>
           </div>
-          <div className="flip-card-back flex justify-center items-center w-[100%] h-[100%] bg-cover text-white rounded-[20px] p-4">
+          <div className="flip-card-back flex justify-center items-center w-[100%] h-[100%] bg-cover text-black text-[20px] font-bold rounded-[20px] p-4">
             <h1>Loading...</h1>
           </div>
         </div>

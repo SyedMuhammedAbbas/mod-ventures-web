@@ -79,6 +79,9 @@ import Mod_Building from "./MOD-Building.png";
 
 import Logo from "./MOD-Building-PT2_0017_Logo.png";
 
+// team members images
+import Profile from "./teams-images/profile.png";
+
 // services
 import Service from "./services/service_sample.png";
 
@@ -160,4 +163,5 @@ export {
   Mod_Building,
   Logo,
   Service,
+  Profile,
 };

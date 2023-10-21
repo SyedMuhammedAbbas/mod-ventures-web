@@ -260,3 +260,12 @@
   display: flex;
   /* transform: rotateY(0deg) scaleX(-1); */
 }
+
+/* Slick Slider */
+.slick-slide > div {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}

@@ -51,26 +51,33 @@ export const ServiceCard = ({
           alt={"sample service image"}
           className="w-[200px] md:w-[400px] aspect-auto"
         />
-        <div className="flex flex-col w-[500px]">
-          <h3 className={`${sectionHeadText}`}>{heading}</h3>
-          <p className={`${sectionSubText}`}>{description}</p>
-        </div>
+        <motion.div className="flex flex-col w-[500px]">
+          <motion.h3
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className={`${sectionHeadText}`}
+          >
+            {heading}
+          </motion.h3>
+          <motion.p
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className={`${sectionSubText}`}
+          >
+            {description}
+          </motion.p>
+        </motion.div>
       </motion.div>
-      <motion.div
-        variants={{ hidden: { left: 0 }, visible: { left: "100%" } }}
-        initial="hidden"
-        animate={slideControls}
-        transition={{ duration: 0.5, ease: "easeIn" }}
-        style={{
-          position: "absolute",
-          top: 4,
-          bottom: 4,
-          left: 0,
-          right: 0,
-          background: "var(--brand)",
-          zIndex: 20,
-        }}
-      ></motion.div>
     </div>
   );
 };
