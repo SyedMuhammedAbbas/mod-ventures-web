@@ -4,7 +4,7 @@ import Image from "next/image";
 import { sectionHeadText, sectionSubText } from "@/app/Styles";
 import { motion, useAnimation, useInView } from "framer-motion";
 // import { fadeIn } from "@/utils/motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export const ServiceCard = ({
   image,
@@ -26,7 +26,6 @@ export const ServiceCard = ({
 
   useEffect(() => {
     if (isInView) {
-      // useAnimation
       mainControls.start("visible");
       slideControls.start("visible");
     }
@@ -46,12 +45,49 @@ export const ServiceCard = ({
       ${isEven ? "flex-row-reverse" : "flex-row"}
       `}
       >
-        <Image
-          src={image}
-          alt={"sample service image"}
-          className="w-[200px] md:w-[400px] aspect-auto"
-        />
-        <motion.div className="flex flex-col w-[500px]">
+        <motion.div className="flip-card bg-[#ffffff] border-[2px] w-[270px]  border-[#000000] drop-shadow-xl cursor-pointer my-4 rounded-[20px] shadow-lg">
+          <div className="flex flex-col  justify-between">
+            <div className="flex justify-end border-b-2 p-3 border-[#000000]">
+              <motion.h2 layout="position">Services</motion.h2>
+            </div>
+            <motion.div
+              layout="position"
+              className="h-[200px] flex gap-3 p-3 justify-center items-center"
+            >
+              <motion.div
+                layout="position"
+                // variants={imageVariants}
+                className="flex justify-center items-center"
+              >
+                <Image
+                  src={image}
+                  alt="profile"
+                  className="aspect-auto object-contain w-[200px]"
+                />
+              </motion.div>
+            </motion.div>
+            <motion.div
+              layout="position"
+              className="relative flex justify-between items-end"
+            >
+              <motion.div
+                layout="position"
+                className="flex flex-col items-start justify-center py-1 z-10 px-3 w-[100%] border-t-[2px] border-[#000000]"
+              >
+                <motion.h4 layout="position">mod.ventures</motion.h4>
+
+                <motion.h4
+                  layout="position"
+                  className="text-[#000000] font-semibold text-[18px]"
+                >
+                  {heading}
+                </motion.h4>
+              </motion.div>
+            </motion.div>
+          </div>
+        </motion.div>
+
+        <motion.div className="flex flex-col w-[400px]">
           <motion.h3
             variants={{
               hidden: { opacity: 0, y: 75 },

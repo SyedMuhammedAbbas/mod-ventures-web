@@ -12,7 +12,7 @@ import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import { Parallax, ParallaxLayer, IParallax } from "@react-spring/parallax";
 // import { Layer1, Layer2, Layer3, Layer4, Layer5 } from "@/components/Landing";
-import { Cloud1, Drone } from "@/assets/images";
+import { Cloud1, Cloud2, Drone } from "@/assets/images";
 import { Navbar } from "@/components/Navbar";
 import { CloudsDimensions } from "@/app/Styles";
 import { SmallCloudDimensions } from "@/app/Styles/styles";
@@ -50,7 +50,7 @@ export const Building = () => {
       style={{ width: "100%", height: "100%" }}
     >
       <Parallax ref={parallax} className="landing-parallax" pages={3}>
-        <ParallaxLayer
+        {/* <ParallaxLayer
           offset={1}
           speed={1}
           style={{ backgroundColor: "#ffffff" }}
@@ -60,24 +60,12 @@ export const Building = () => {
           offset={2}
           speed={1}
           style={{ backgroundColor: "#ffffff" }}
-        />
-
-        {/* <ParallaxLayer
-          offset={0}
-          speed={0}
-          factor={3}
-          style={{
-            backgroundImage: url("stars", true),
-            backgroundSize: "cover",
-          }}
         /> */}
 
         <ParallaxLayer offset={0.3} speed={0.4} style={{ opacity: 0.6 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
-            // width={220}
-            // height={220}
             className={`${CloudsDimensions}`}
             style={{ display: "block", marginLeft: "5%" }}
             alt={""}
@@ -85,8 +73,6 @@ export const Building = () => {
           <Image
             src={Cloud1}
             layout="intrinsic"
-            // width={165}
-            // height={165}
             className={`${CloudsDimensions}`}
             style={{ display: "block", marginLeft: "75%" }}
             alt={""}
@@ -101,8 +87,6 @@ export const Building = () => {
           <Image
             src={Drone}
             layout="intrinsic"
-            // width={170}
-            // height={170}
             className="w-[50px] ml-[5%] lg:ml-[7%] xl:ml-[15%] 2xl:ml-[17%] sm:w-[70px] lg:w-[90px] 2xl:w-[120px] aspect-auto z-[99999]"
             // style={{ marginLeft: "20%" }}
             alt={""}
@@ -113,8 +97,6 @@ export const Building = () => {
           <Image
             src={Cloud1}
             layout="intrinsic"
-            // width={220}
-            // height={220}
             className={`${CloudsDimensions}`}
             style={{ display: "block", marginLeft: "55%" }}
             alt={""}
@@ -122,15 +104,13 @@ export const Building = () => {
           <Image
             src={Cloud1}
             layout="intrinsic"
-            // width={110}
-            // height={110}
             className={`${SmallCloudDimensions}`}
             style={{ display: "block", marginLeft: "15%" }}
             alt={""}
           />
         </ParallaxLayer>
 
-        {/* <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
+        <ParallaxLayer offset={1.75} speed={0.5} style={{ opacity: 0.1 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
@@ -140,16 +120,16 @@ export const Building = () => {
             alt={""}
           />
           <Image
-            src={Cloud1}
+            src={Cloud2}
             layout="intrinsic"
             width={220}
             height={220}
             style={{ display: "block", marginLeft: "40%" }}
             alt={""}
           />
-        </ParallaxLayer> */}
+        </ParallaxLayer>
 
-        {/* <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
+        <ParallaxLayer offset={1} speed={0.2} style={{ opacity: 0.2 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
@@ -159,16 +139,16 @@ export const Building = () => {
             alt={""}
           />
           <Image
-            src={Cloud1}
+            src={Cloud2}
             layout="intrinsic"
             width={220}
             height={220}
             style={{ display: "block", marginLeft: "75%" }}
             alt={""}
           />
-        </ParallaxLayer> */}
+        </ParallaxLayer>
 
-        {/* <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
+        <ParallaxLayer offset={1.6} speed={-0.1} style={{ opacity: 0.4 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
@@ -178,7 +158,7 @@ export const Building = () => {
             alt={""}
           />
           <Image
-            src={Cloud1}
+            src={Cloud2}
             layout="intrinsic"
             width={275}
             height={275}
@@ -193,7 +173,7 @@ export const Building = () => {
             style={{ display: "block", marginLeft: "80%" }}
             alt={""}
           />
-        </ParallaxLayer> */}
+        </ParallaxLayer>
 
         <ParallaxLayer offset={2} speed={0.4} style={{ opacity: 0.6 }}>
           <Image
@@ -206,7 +186,7 @@ export const Building = () => {
             alt={""}
           />
           <Image
-            src={Cloud1}
+            src={Cloud2}
             layout="intrinsic"
             // width={165}
             // height={165}
@@ -216,7 +196,7 @@ export const Building = () => {
           />
         </ParallaxLayer>
 
-        {/* <ParallaxLayer offset={3.6} speed={0.4} style={{ opacity: 0.6 }}>
+        <ParallaxLayer offset={3.6} speed={0.4} style={{ opacity: 0.6 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
@@ -226,16 +206,16 @@ export const Building = () => {
             alt={""}
           />
           <Image
-            src={Cloud1}
+            src={Cloud2}
             layout="intrinsic"
             width={165}
             height={165}
             style={{ display: "block", marginLeft: "75%" }}
             alt={""}
           />
-        </ParallaxLayer> */}
+        </ParallaxLayer>
 
-        {/* <ParallaxLayer offset={4.6} speed={0.4} style={{ opacity: 0.6 }}>
+        <ParallaxLayer offset={4.6} speed={0.4} style={{ opacity: 0.6 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
@@ -245,16 +225,16 @@ export const Building = () => {
             alt={""}
           />
           <Image
-            src={Cloud1}
+            src={Cloud2}
             layout="intrinsic"
             width={165}
             height={165}
             style={{ display: "block", marginLeft: "75%" }}
             alt={""}
           />
-        </ParallaxLayer> */}
+        </ParallaxLayer>
 
-        {/* <ParallaxLayer offset={5} speed={0.4} style={{ opacity: 0.6 }}>
+        <ParallaxLayer offset={5} speed={0.4} style={{ opacity: 0.6 }}>
           <Image
             src={Cloud1}
             layout="intrinsic"
@@ -264,42 +244,14 @@ export const Building = () => {
             alt={""}
           />
           <Image
-            src={Cloud1}
+            src={Cloud2}
             layout="intrinsic"
             width={165}
             height={165}
             style={{ display: "block", marginLeft: "75%" }}
             alt={""}
           />
-        </ParallaxLayer> */}
-        {/* <ParallaxLayer
-          offset={2.5}
-          speed={-0.4}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            pointerEvents: "none",
-          }}
-        >
-          <Image
-            src={url("earth")}
-            layout="intrinsic"
-            width={660}
-            height={660}
-            alt={""}
-          />
-        </ParallaxLayer> */}
-
-        {/* <ParallaxLayer
-          offset={2}
-          speed={-0.3}
-          style={{
-            backgroundSize: "80%",
-            backgroundPosition: "center",
-            backgroundImage: url("clients", true),
-          }}
-        /> */}
+        </ParallaxLayer>
 
         <ParallaxLayer
           offset={0}
@@ -311,13 +263,6 @@ export const Building = () => {
             justifyContent: "center",
           }}
         >
-          {/* <Image
-            src={url("server")}
-            layout="intrinsic"
-            width={132}
-            height={132}
-            alt={""}
-          /> */}
           <div className="pb-[5%]">
             <Layer1 />
           </div>
@@ -333,13 +278,6 @@ export const Building = () => {
             justifyContent: "center",
           }}
         >
-          {/* <Image
-            src={url("bash")}
-            layout="intrinsic"
-            width={264}
-            height={264}
-            alt={""}
-          /> */}
           <div className="my-[5%]">
             <Layer2 />
           </div>
@@ -355,13 +293,6 @@ export const Building = () => {
             justifyContent: "center",
           }}
         >
-          {/* <Image
-            src={url("bash")}
-            layout="intrinsic"
-            width={264}
-            height={264}
-            alt={""}
-          /> */}
           <div className="my-[5%]">
             <Layer3 />
           </div>
@@ -377,13 +308,6 @@ export const Building = () => {
             justifyContent: "center",
           }}
         >
-          {/* <Image
-            src={url("bash")}
-            layout="intrinsic"
-            width={264}
-            height={264}
-            alt={""}
-          /> */}
           <div className="mt-[10%]">
             <Layer4 />
           </div>
@@ -399,13 +323,6 @@ export const Building = () => {
           }}
           onClick={() => parallax?.current?.scrollTo(0)}
         >
-          {/* <Image
-            src={url("clients-main")}
-            layout="intrinsic"
-            width={264}
-            height={264}
-            alt={""}
-          /> */}
           <div className="my-[5%]">
             <Layer5 />
           </div>
