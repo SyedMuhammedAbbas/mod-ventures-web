@@ -63,8 +63,20 @@ export const PagesCard = ({ text, path }: { text: string; path: string }) => {
         onClick={handleFlip}
       >
         <div className="flip-card-inner rotate">
-          <div className="flip-card-front flex justify-center items-center w-[100%] h-[100%] bg-cover text-black text-[20px] font-bold rounded-[20px] p-4">
-            <h1>{text}</h1>
+          <div className="flip-card-front flex justify-center items-center w-[100%] h-[100%] bg-cover text-[20px] font-bold rounded-[20px] p-4">
+            <h1
+              className="text-white"
+              style={{
+                content: "''",
+                fontSize: "30px",
+                color: "transparent",
+                background: "black",
+                WebkitBackgroundClip: "text",
+                textShadow: "2px 5px 5px rgba(255, 255, 255, 0.9)",
+              }}
+            >
+              {text}
+            </h1>
           </div>
           <div className="flip-card-back flex justify-center items-center w-[100%] h-[100%] bg-cover text-black text-[20px] font-bold rounded-[20px] p-4">
             <h1>Loading...</h1>

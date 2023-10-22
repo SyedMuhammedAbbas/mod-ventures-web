@@ -248,8 +248,8 @@
 
 .flip-card-back {
   transform: rotateY(180deg) scaleX(-1);
-  background-color: #cccccc; /* Set the background color or style as needed */
-  color: #fff; /* Set the text color as needed */
+  background-color: #cccccc;
+  color: #fff;
 }
 
 .flip-card.flipped .flip-card-inner {
@@ -258,7 +258,6 @@
 
 .flip-card.flipped .flip-card-back {
   display: flex;
-  /* transform: rotateY(0deg) scaleX(-1); */
 }
 
 /* Slick Slider */

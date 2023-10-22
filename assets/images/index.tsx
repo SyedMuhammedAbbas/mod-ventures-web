@@ -85,6 +85,12 @@ import Profile from "./teams-images/profile.png";
 // services
 import Service from "./services/service_sample.png";
 
+// Projects page images
+import Frames from "./project-images/Frames.svg";
+import Layer16 from "./project-images/Layer 16.svg";
+import Vector_Smart_Object_2 from "./project-images/Vector Smart Object-2.svg";
+import Vector_Smart_Object_3 from "./project-images/Vector Smart Object-3.svg";
+
 export {
   BB_Logo,
   Bean_Bag_Man,
@@ -164,4 +170,8 @@ export {
   Logo,
   Service,
   Profile,
+  Frames,
+  Layer16,
+  Vector_Smart_Object_2,
+  Vector_Smart_Object_3,
 };
