@@ -14,6 +14,7 @@ import {
   Oculus_Man_1,
   Rob_Cat,
   Roof_Plant,
+  TopFloor,
 } from "@/assets/images";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
@@ -90,7 +91,7 @@ export const Layer1 = () => {
 
       <div className={`${FloorDimensions} relative`}>
         <Image
-          src={Mod_Building_Floor2_Bottom}
+          src={TopFloor}
           style={{
             position: "absolute",
             // width: "500px",
@@ -101,7 +102,7 @@ export const Layer1 = () => {
           alt=""
         />
 
-        <Image
+        {/* <Image
           src={Billboard}
           className="w-[120px] sm:w-[170px] md:w-[230px] lg:w-[250px] top-[7%] left-[40%]"
           style={{
@@ -190,7 +191,7 @@ export const Layer1 = () => {
             zIndex: 999,
           }}
           // className="rotate-image"
-        />
+        /> */}
       </div>
     </motion.section>
   );

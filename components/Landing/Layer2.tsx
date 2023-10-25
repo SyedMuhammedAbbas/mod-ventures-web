@@ -11,6 +11,7 @@ import {
   Layer43,
   Layer72,
   Monalisa,
+  SecondFloor,
   Table,
 } from "@/assets/images";
 import { FloorDimensions, Width } from "../../app/Styles";
@@ -59,7 +60,7 @@ export const Layer2 = () => {
       ></motion.div>
       <div className={`${FloorDimensions} relative`}>
         <Image
-          src={Layer43}
+          src={SecondFloor}
           className={`group-hover:opacity-80`}
           style={{
             position: "absolute",
@@ -70,7 +71,7 @@ export const Layer2 = () => {
           // className="group-hover:opacity-80"
           alt=""
         />
-        <Image
+        {/* <Image
           src={Drone_Guy}
           className="w-[25px] sm:w-[35px] md:w-[45px] lg:w-[55px] top-[35%] left-[20%]"
           style={{
@@ -116,7 +117,7 @@ export const Layer2 = () => {
           }}
           alt=""
         />
-        {/* <Image
+        <Image
         src={Layer72}
         style={{
           width: "157px",

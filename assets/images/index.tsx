@@ -91,6 +91,10 @@ import Layer16 from "./project-images/Layer 16.svg";
 import Vector_Smart_Object_2 from "./project-images/Vector Smart Object-2.svg";
 import Vector_Smart_Object_3 from "./project-images/Vector Smart Object-3.svg";
 
+// Floors
+import TopFloor from "./floors/TopFloor.png";
+import SecondFloor from "./floors/SecondFloor.png";
+
 export {
   BB_Logo,
   Bean_Bag_Man,
@@ -174,4 +178,6 @@ export {
   Layer16,
   Vector_Smart_Object_2,
   Vector_Smart_Object_3,
+  TopFloor,
+  SecondFloor,
 };
