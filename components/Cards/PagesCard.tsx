@@ -65,10 +65,9 @@ export const PagesCard = ({ text, path }: { text: string; path: string }) => {
         <div className="flip-card-inner rotate">
           <div className="flip-card-front flex justify-center items-center w-[100%] h-[100%] bg-cover text-[20px] font-bold rounded-[20px] p-4">
             <h1
-              className="text-white"
+              className="text-white text-[20px] sm:text-[25px] lg:text-[30px]"
               style={{
                 content: "''",
-                fontSize: "30px",
                 color: "transparent",
                 background: "black",
                 WebkitBackgroundClip: "text",
