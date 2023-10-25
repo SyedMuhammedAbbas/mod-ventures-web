@@ -2,7 +2,7 @@
 
 import { ServiceCard } from "@/components/Cards";
 import { services } from "@/constants";
-import { Clouds } from "@/utils/clouds";
+import { Clouds } from "@/utils/Clouds";
 // import { SectionWrapper } from "@/hoc";
 
 export default function Services() {

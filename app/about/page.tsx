@@ -9,7 +9,7 @@ import {
   Oculus_Man_1,
   Rob_Cat,
 } from "@/assets/images";
-import { Clouds } from "@/utils/clouds";
+import { Clouds } from "@/utils/Clouds";
 import Image from "next/image";
 
 const About = () => {
