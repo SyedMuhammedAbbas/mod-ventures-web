@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import {
+  Background,
   Blinds1,
   Clock,
   Layer29,
@@ -130,7 +131,7 @@ const Teams = () => {
           className="absolute top-[10%] z-10 aspect-auto right-[10%] w-[50px] sm:w-[60px] lg:w-[80px]"
         />
 
-        <div className="absolute bottom-5 md:bottom-[10%]  right-[10%] ">
+        <div className="absolute z-20 bottom-5 md:bottom-[10%]  right-[10%] ">
           <div className="relative w-[200px] sm:w-[250px] md:w-[400px] lg:w-[600px]">
             <Image
               src={Woman}
@@ -150,7 +151,7 @@ const Teams = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-5 md:bottom-[10%] left-[10%] ">
+        <div className="absolute z-20 bottom-5 md:bottom-[10%] left-[10%] ">
           <div className="relative w-[100px]">
             <Image
               src={Mod_Building_Ideas_Man}
@@ -165,7 +166,7 @@ const Teams = () => {
           </div>
         </div>
 
-        <div className="absolute top-[20%] sm:top-[30%] left-0  sm:left-[10%] ">
+        <div className="absolute z-20 top-[20%] sm:top-[30%] left-0  sm:left-[10%] ">
           <div className="relative w-[100px]">
             <Image
               src={Blinds1}
@@ -179,7 +180,7 @@ const Teams = () => {
             /> */}
           </div>
         </div>
-        <div className="absolute top-[40%] right-3 sm:right-[10%] ">
+        <div className="absolute z-20 top-[40%] right-3 sm:right-[10%] ">
           <div className="relative w-[100px]">
             <Image
               src={Blinds1}
@@ -194,14 +195,10 @@ const Teams = () => {
           </div>
         </div>
 
-        {/* <div className="flex items-center justify-center">
-          <Image
-            src={Vector_Smart_Object_Project_SVG}
-            alt="background splash"
-            className="w-[70%]"
-          />
-        </div> */}
-        <div className="w-[70vw] sm:w-[50vw] featuredcards mx-auto my-auto  h-[400px]">
+        <div className="absolute z-10 flex items-center justify-center top-[35%] md:top-[20%] left-[5%] lg:left-[15%] xl:left-[24%]">
+          <Image src={Background} alt="background splash" className="w-[80%]" />
+        </div>
+        <div className="w-[70vw] z-20 sm:w-[50vw] featuredcards mx-auto my-auto  h-[400px]">
           <Slider {...settings}>
             {teams.map((member, index) => (
               <div key={index}>

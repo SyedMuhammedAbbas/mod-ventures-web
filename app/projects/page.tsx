@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Frames,
   Layer15,
@@ -11,8 +13,72 @@ import {
 import Image from "next/image";
 import { Profile } from "@/assets/images";
 import { ProjectsCard } from "@/components/Cards";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const Projects = () => {
+  var settings = {
+    dots: true,
+    dotsClass: "slick-dots",
+    // infinite: true,
+    speed: 400,
+    // autoplay: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 0,
+    appendDots: (dots: any) => <ul>{dots}</ul>,
+    customPaging: (i: any) => <div className="ft-slick__dots--custom"></div>,
+    responsive: [
+      // {
+      //   breakpoint: 2400,
+      //   settings: {
+      //     slidesToShow: 4,
+      //     slidesToScroll: 1,
+      //     infinite: true,
+      //     dots: true,
+      //   },
+      // },
+      // {
+      //   breakpoint: 1800,
+      //   settings: {
+      //     slidesToShow: 4,
+      //     slidesToScroll: 1,
+      //     infinite: true,
+      //     dots: true,
+      //   },
+      // },
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 1220,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 890,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true,
+        },
+      },
+    ],
+  };
+
   const projects = [
     {
       name: "John Smith",
@@ -88,16 +154,19 @@ const Projects = () => {
             />
           </div>
         </div>
-
-        {projects.map((member, index) => (
-          <div key={index}>
-            <ProjectsCard
-              name={member.name}
-              description={member.description}
-              image={member.image}
-            />
-          </div>
-        ))}
+        <div className="w-[70vw] z-20 sm:w-[50vw] featuredcards mx-auto my-auto  h-[400px]">
+          <Slider {...settings}>
+            {projects.map((member, index) => (
+              <div key={index}>
+                <ProjectsCard
+                  name={member.name}
+                  description={member.description}
+                  image={member.image}
+                />
+              </div>
+            ))}{" "}
+          </Slider>
+        </div>
       </div>
     </>
   );

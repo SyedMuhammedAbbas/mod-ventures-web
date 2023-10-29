@@ -268,3 +268,9 @@
   justify-content: center;
   align-items: center;
 }
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+  transform: translate(-100%, -50%) !important;
+}
