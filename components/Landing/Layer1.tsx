@@ -19,6 +19,7 @@ import {
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Width, FloorDimensions } from "../../app/Styles";
+import { OculusManAnimated, RobotCatAnimated } from "@/assets";
 
 export const Layer1 = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -101,6 +102,18 @@ export const Layer1 = () => {
           className={`group-hover:opacity-80 ${Width}`}
           alt=""
         />
+        <Image
+          src={RobotCatAnimated}
+          className="w-[70px] md:w-[100px] lg:w-[150px] bottom-[31%] left-[31%]"
+          style={{
+            position: "absolute",
+            // width: "36px",
+            // top: "56px",
+            // left: "236px",
+            zIndex: 999,
+          }}
+          alt={""}
+        />
 
         {/* <Image
           src={Billboard}
@@ -177,11 +190,11 @@ export const Layer1 = () => {
             zIndex: 999,
           }}
           alt={""}
-        />
+        /> */}
 
         <Image
-          src={Oculus_Man_1}
-          className="w-[51px] sm:w-[61px] md:w-[71px] lg:w-[90px] top-[50%] right-[25%]"
+          src={OculusManAnimated}
+          className="w-[100px] sm:w-[150px] md:w-[180px] lg:w-[200px] top-[45%] right-[20%]"
           alt="Rotating Image"
           style={{
             position: "absolute",
@@ -191,7 +204,7 @@ export const Layer1 = () => {
             zIndex: 999,
           }}
           // className="rotate-image"
-        /> */}
+        />
       </div>
     </motion.section>
   );

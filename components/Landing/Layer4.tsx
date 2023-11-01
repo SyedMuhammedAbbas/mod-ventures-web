@@ -14,6 +14,7 @@ import {
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import { FloorDimensions } from "../../app/Styles";
+import { StandingManAnimated } from "@/assets";
 
 export const Layer4 = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -67,8 +68,8 @@ export const Layer4 = () => {
         />
 
         <Image
-          src={Mod_Building_Ideas_Man}
-          className="w-[34px] sm:w-[44px] md:w-[54px] lg:w-[64px] bottom-[40%] left-[15%]"
+          src={StandingManAnimated}
+          className="w-[150px] sm:w-[250px] md:w-[300px] lg:w-[350px] bottom-[40%] left-[5%]"
           style={{
             position: "absolute",
             // bottom: "50px",
@@ -79,12 +80,12 @@ export const Layer4 = () => {
           alt=""
         />
 
-        <Image
+        {/* <Image
           src={Mod_Building_Ideas_Man_Items}
           className="absolute w-[103px] sm:w-[140px] md:w-[160px] lg:w-[200px] bottom-[67%] left-[4%]"
           style={{ zIndex: 99999 }}
           alt=""
-        />
+        /> */}
 
         <Image
           src={Mod_Building_Floor2_Bottom}

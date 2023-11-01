@@ -120,12 +120,12 @@ const Projects = () => {
   return (
     <>
       <div className="relative min-w-screen min-h-[100vh] flex flex-col gap-5 items-center justify-center">
-        <div className="fixed bottom-[40%] md:bottom-20 right-5 md:right-10">
-          <div className="relative w-[150px] md:w-[200px] lg:w-[300px] h-[200px] md:h-[250px] lg:h-[350px]">
+        <div className="fixed bottom-[70%] sm:bottom-[40%] md:bottom-20 right-5 md:right-10">
+          <div className="relative w-[100px] md:w-[200px] lg:w-[300px] h-[200px] md:h-[250px] lg:h-[350px]">
             <Image
               src={Painting2}
               alt={""}
-              className="absolute top-0 z-10 aspect-auto right-[10%] w-[50px] md:w-[100px] lg:w-[140px]"
+              className="absolute top-[30%] sm:top-[10%] md:top-0 z-10 aspect-auto right-[10%] w-[50px] md:w-[100px] lg:w-[140px]"
             />
             <Image
               src={Layer15}
@@ -135,12 +135,12 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="fixed bottom-10 left-14">
+        <div className="fixed bottom-3 sm:bottom-6 md:bottom-10 left-14">
           <div className="relative w-[150px] md:w-[200px] lg:w-[300px] h-[200px] md:h-[250px] lg:h-[350px]">
             <Image
               src={Painting1}
               alt={""}
-              className="absolute top-0 z-20 aspect-auto left-[10%] w-[50px] md:w-[100px] lg:w-[140px]"
+              className="absolute top-[30%] sm:top-[10%] md:top-0 z-20 aspect-auto left-[10%] w-[50px] md:w-[100px] lg:w-[140px]"
             />
             <Image
               src={Women_Sitting}

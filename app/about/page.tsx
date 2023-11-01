@@ -1,3 +1,4 @@
+import { OculusManAnimated, RobotCatAnimated } from "@/assets";
 import {
   Billboard,
   Cloud1,
@@ -11,6 +12,12 @@ import {
 } from "@/assets/images";
 import { Clouds } from "@/utils/Clouds";
 import Image from "next/image";
+import { Kenia } from "next/font/google";
+
+const roboto = Kenia({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 const About = () => {
   const aboutText =
@@ -28,16 +35,16 @@ const About = () => {
             />
 
             <Image
-              src={Oculus_Man_1}
+              src={OculusManAnimated}
               alt={""}
-              className="absolute bottom-[20%] z-20 aspect-auto right-[17%] w-[70px] sm:w-[90px] md:w-[120px] lg:w-[150px]"
+              className="absolute bottom-[20%] z-20 aspect-auto right-[0%] md:right-[10%] w-[150px] sm:w-[200px] md:w-[250px] lg:w-[300px]"
             />
           </div>
         </div>
         <Image
-          src={Rob_Cat}
+          src={RobotCatAnimated}
           alt={""}
-          className="absolute bottom-[10%] md:bottom-[20%]  aspect-auto left-[45%] w-[70px] sm:w-[90px] md:w-[120px] lg:w-[150px]"
+          className="absolute bottom-[10%] md:bottom-[20%]  aspect-auto left-[45%] w-[70px] md:w-[100px] lg:w-[150px]"
         />
         {/* <Image
           src={Billboard}
@@ -55,7 +62,7 @@ const About = () => {
             <Image
               src={Layer20}
               alt={""}
-              className="absolute bottom-[33%] aspect-auto left-[45%] w-[50px] md:w-[60px] lg:w-[90px]"
+              className="absolute bottom-[33%] aspect-auto left-[45%] w-[50px] md:w-[60px] lg:w-[90px] animate-pulse"
             />
             <Image
               src={Layer10}
@@ -65,7 +72,9 @@ const About = () => {
           </div>
         </div>
         <div className="flex justify-center items-center">
-          <h1 className="text-center text-[20px] md:text-[25px] lg:text-[30px] font-bold font-sans">
+          <h1
+            className={`text-center text-[25px] md:text-[35px] lg:text-[50px] font-bold font-sans ${roboto.className}`}
+          >
             Elevate Your Digital Dreams with Mod.Ventures
             <br /> Where Innovation Takes Flight!
           </h1>

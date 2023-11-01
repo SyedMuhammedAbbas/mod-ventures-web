@@ -47,6 +47,7 @@ export const Navbar = () => {
               src={Logo}
               alt="logo"
               className="w-[60px] aspect-auto md:w-[100px]"
+              onClick={() => setIsOpen(false)}
             />
           </Link>
           <div

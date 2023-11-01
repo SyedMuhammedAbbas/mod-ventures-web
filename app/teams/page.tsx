@@ -21,6 +21,7 @@ import {
   Woman,
 } from "@/assets/images";
 import Image from "next/image";
+import { ClockAnimated, StandingManAnimated } from "@/assets";
 
 const Teams = () => {
   var settings = {
@@ -126,7 +127,7 @@ const Teams = () => {
     <>
       <div className="relative flex gap-4 min-h-[100vh] justify-center items-center">
         <Image
-          src={Clock}
+          src={ClockAnimated}
           alt={""}
           className="absolute top-[10%] z-10 aspect-auto right-[10%] w-[50px] sm:w-[60px] lg:w-[80px]"
         />
@@ -151,12 +152,12 @@ const Teams = () => {
           </div>
         </div>
 
-        <div className="absolute z-20 bottom-5 md:bottom-[10%] left-[10%] ">
-          <div className="relative w-[100px]">
+        <div className="absolute z-20 bottom-5 md:bottom-[10%] left-[5%] ">
+          <div className="relative w-[200px] sm:w-[270px] md:w-[330px] lg:w-[380px]">
             <Image
-              src={Mod_Building_Ideas_Man}
+              src={StandingManAnimated}
               alt={""}
-              className="absolute bottom-0 right-0 z-10 aspect-auto w-[50px] sm:w-[60px] md:w-[70px] lg:w-[100px]"
+              className="absolute bottom-0 right-0 z-10 aspect-auto w-[200px] sm:w-[270px] md:w-[330px] lg:w-[380px]"
             />
             {/* <Image
               src={Screens2}

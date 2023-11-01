@@ -6,6 +6,7 @@ import { Layer29, Layer30, Layer30_1, Layer32_3 } from "@/assets/images";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import { FloorDimensions } from "../../app/Styles";
+import { ChatManAnimated } from "@/assets";
 
 export const Layer5 = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -27,8 +28,8 @@ export const Layer5 = () => {
     >
       <div className={`${FloorDimensions} relative`}>
         <Image
-          src={Layer32_3}
-          className="w-[30%] right-[20%]"
+          src={ChatManAnimated}
+          className="w-[40%] right-[17%]"
           style={{
             position: "absolute",
             // width: "30%",
