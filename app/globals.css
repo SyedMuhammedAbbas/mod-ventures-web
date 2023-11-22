@@ -285,3 +285,12 @@
     opacity: 0;
   }
 }
+
+/* @layer base {
+  .font-outline-2 {
+    -webkit-text-stroke: 10px #50505036;
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px black;
+  }
+} */

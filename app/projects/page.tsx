@@ -16,6 +16,7 @@ import { ProjectsCard } from "@/components/Cards";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { PhotoshootCamera } from "@/assets";
 
 const Projects = () => {
   var settings = {
@@ -127,12 +128,12 @@ const Projects = () => {
               alt={""}
               className="absolute top-[30%] sm:top-[10%] md:top-0 z-10 aspect-auto right-[10%] w-[50px] md:w-[100px] lg:w-[140px]"
             />
-            <Image
-              src={Layer15}
-              alt={""}
-              className="absolute bottom-0 z-10 aspect-auto w-[100%]"
-            />
           </div>
+          <Image
+            src={PhotoshootCamera}
+            alt={""}
+            className="absolute bottom-0 z-10 aspect-auto w-[150%]"
+          />
         </div>
 
         <div className="fixed bottom-3 sm:bottom-6 md:bottom-10 left-14">

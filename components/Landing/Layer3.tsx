@@ -10,10 +10,13 @@ import {
   Mod_Building_Floor1_Women,
   Painting1,
   Painting2,
+  second_floor,
 } from "@/assets/images";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import { FloorDimensions } from "../../app/Styles";
+import { PhotoshootCamera } from "@/assets";
+// import { FloorDimensionsWithBalcony } from "@/app/Styles/styles";
 
 export const Layer3 = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -46,7 +49,7 @@ export const Layer3 = () => {
         }}
         className={`group cursor-pointer ${FloorDimensions}`}
       >
-        <Image
+        {/* <Image
           src={Painting1}
           className="w-[80px] sm:w-[100px] md:w-[120px] lg:w-[140px] top-[0%] left-[16px]"
           style={{
@@ -68,9 +71,9 @@ export const Layer3 = () => {
             // right: "16px",
           }}
           alt=""
-        />
+        /> */}
 
-        <Image
+        {/* <Image
           src={Mod_Building_Floor1_Women}
           className="w-[34px] sm:w-[43px] md:w-[53px] lg:w-[63px] bottom-[50%] left-[35%]"
           style={{
@@ -81,9 +84,9 @@ export const Layer3 = () => {
             zIndex: 99999,
           }}
           alt=""
-        />
+        /> */}
 
-        <Image
+        {/* <Image
           src={Mod_Building_Floor1_Glass}
           style={{
             width: "60%",
@@ -93,10 +96,10 @@ export const Layer3 = () => {
             zIndex: 9999,
           }}
           alt=""
-        />
+        /> */}
 
         <Image
-          src={Mod_Building_Floor1_Bottom}
+          src={second_floor}
           style={{
             width: "100%",
             position: "absolute",
@@ -107,7 +110,7 @@ export const Layer3 = () => {
 
         <Image
           src={Mod_Building_Balcony}
-          className="w-[50%] bottom-[12%] left-[-10%]"
+          className="w-[50%] bottom-0 left-[-16%]"
           style={{
             position: "absolute",
             // width: "50%",
@@ -119,11 +122,11 @@ export const Layer3 = () => {
         />
 
         <Image
-          src={Mod_Building_Floor1_Photograph}
-          className="bottom-[35%] right-[17%]"
+          src={PhotoshootCamera}
+          className="w-[35%] bottom-[15%] right-[15%]"
           style={{
             position: "absolute",
-            width: "35%",
+            // width: "35%",
             // bottom: "55px",
             // right: "34px",
           }}

@@ -14,12 +14,16 @@ import {
   Oculus_Man_1,
   Rob_Cat,
   Roof_Plant,
-  TopFloor,
+  roof_floor,
 } from "@/assets/images";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { Width, FloorDimensions } from "../../app/Styles";
-import { OculusManAnimated, RobotCatAnimated } from "@/assets";
+import {
+  BillBoard_Animated,
+  OculusManAnimated,
+  RobotCatAnimated,
+} from "@/assets";
 
 export const Layer1 = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -92,7 +96,7 @@ export const Layer1 = () => {
 
       <div className={`${FloorDimensions} relative`}>
         <Image
-          src={TopFloor}
+          src={roof_floor}
           style={{
             position: "absolute",
             // width: "500px",
@@ -104,7 +108,7 @@ export const Layer1 = () => {
         />
         <Image
           src={RobotCatAnimated}
-          className="w-[70px] md:w-[100px] lg:w-[150px] bottom-[31%] left-[31%]"
+          className="w-[20%] top-[45%] left-[35%]"
           style={{
             position: "absolute",
             // width: "36px",
@@ -115,9 +119,9 @@ export const Layer1 = () => {
           alt={""}
         />
 
-        {/* <Image
-          src={Billboard}
-          className="w-[120px] sm:w-[170px] md:w-[230px] lg:w-[250px] top-[7%] left-[40%]"
+        <Image
+          src={BillBoard_Animated}
+          className="w-[70%] top-[-4%]"
           style={{
             position: "absolute",
             // width: "150px",
@@ -127,7 +131,7 @@ export const Layer1 = () => {
           }}
           alt=""
         />
-
+        {/*
         <Image
           src={BB_Logo}
           className="w-[40px] sm:w-[60px] md:w-[70px] lg:w-[85px] top-[13%] left-[42.4%]"
@@ -194,7 +198,7 @@ export const Layer1 = () => {
 
         <Image
           src={OculusManAnimated}
-          className="w-[100px] sm:w-[150px] md:w-[180px] lg:w-[200px] top-[45%] right-[20%]"
+          className="w-[30%] right-[20%] top-[35%]"
           alt="Rotating Image"
           style={{
             position: "absolute",

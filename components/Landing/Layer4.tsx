@@ -10,11 +10,12 @@ import {
   Mod_Building_From_Selection_Women_Items,
   Mod_Building_Ideas_Man,
   Mod_Building_Ideas_Man_Items,
+  first_floor,
 } from "@/assets/images";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import { FloorDimensions } from "../../app/Styles";
-import { StandingManAnimated } from "@/assets";
+import { RotatingGirl, StandingManAnimated } from "@/assets";
 
 export const Layer4 = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -43,7 +44,7 @@ export const Layer4 = () => {
         className={`${FloorDimensions} relative`}
         // style={{ position: "relative" }}
       >
-        <Image
+        {/* <Image
           src={Mod_Building_Floor2_Painting}
           className="w-[110px] sm:w-[130px] md:w-[150px] lg:w-[170px] bottom-[72%] right-[5%]"
           style={{
@@ -53,9 +54,9 @@ export const Layer4 = () => {
             // right: "16px",
           }}
           alt=""
-        />
+        /> */}
 
-        <Image
+        {/* <Image
           src={Mod_Building_Floor2_Carpet}
           className="w-[90px] sm:w-[110px] md:w-[130px] lg:w-[150px] bottom-[42%] left-[15%]"
           style={{
@@ -65,11 +66,11 @@ export const Layer4 = () => {
             // left: "52px",
           }}
           alt=""
-        />
+        /> */}
 
         <Image
           src={StandingManAnimated}
-          className="w-[150px] sm:w-[250px] md:w-[300px] lg:w-[350px] bottom-[40%] left-[5%]"
+          className="w-[150px] sm:w-[250px] md:w-[300px] lg:w-[350px] bottom-[12%] left-[10%]"
           style={{
             position: "absolute",
             // bottom: "50px",
@@ -88,14 +89,14 @@ export const Layer4 = () => {
         /> */}
 
         <Image
-          src={Mod_Building_Floor2_Bottom}
+          src={first_floor}
           style={{ width: "100%", position: "absolute" }}
           alt=""
         />
 
         <Image
-          src={Mod_Building_From_Selection_Women}
-          className="w-[37px] sm:w-[48px] md:w-[65px] lg:w-[70px] bottom-[50%] right-[25%]"
+          src={RotatingGirl}
+          className="w-[30%] right-[5%] bottom-[29%]"
           style={{
             position: "absolute",
             // height: "100px",
@@ -106,7 +107,7 @@ export const Layer4 = () => {
           alt=""
         />
 
-        <Image
+        {/* <Image
           src={Mod_Building_From_Selection_Women_Items}
           className="w-[35px] sm:w-[45px] md:w-[55px] lg:w-[65px] bottom-[75%] right-[15%]"
           style={{
@@ -117,7 +118,7 @@ export const Layer4 = () => {
             zIndex: 99999,
           }}
           alt=""
-        />
+        /> */}
       </div>
     </motion.section>
   );

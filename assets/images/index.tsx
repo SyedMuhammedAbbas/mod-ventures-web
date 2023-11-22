@@ -92,8 +92,11 @@ import Vector_Smart_Object_2 from "./project-images/Vector Smart Object-2.svg";
 import Vector_Smart_Object_3 from "./project-images/Vector Smart Object-3.svg";
 
 // Floors
-import TopFloor from "./floors/TopFloor.png";
-import SecondFloor from "./floors/SecondFloor.png";
+import first_floor from "./floors/first_floor.gif";
+import second_floor from "./floors/second_floor.gif";
+import third_floor from "./floors/third_floor.gif";
+import roof_floor from "./floors/Roof_floor.gif";
+import ground_floor from "./floors/ground_floor.gif";
 
 export {
   BB_Logo,
@@ -178,6 +181,9 @@ export {
   Layer16,
   Vector_Smart_Object_2,
   Vector_Smart_Object_3,
-  TopFloor,
-  SecondFloor,
+  first_floor,
+  second_floor,
+  third_floor,
+  roof_floor,
+  ground_floor,
 };

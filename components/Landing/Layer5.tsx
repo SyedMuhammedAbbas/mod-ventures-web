@@ -2,11 +2,17 @@
 
 import Image from "next/image";
 
-import { Layer29, Layer30, Layer30_1, Layer32_3 } from "@/assets/images";
+import {
+  Layer29,
+  Layer30,
+  Layer30_1,
+  Layer32_3,
+  ground_floor,
+} from "@/assets/images";
 import { motion, useScroll } from "framer-motion";
 import { useRef } from "react";
 import { FloorDimensions } from "../../app/Styles";
-import { ChatManAnimated } from "@/assets";
+import { ChatManAnimated, SlideWomen } from "@/assets";
 
 export const Layer5 = () => {
   const ref = useRef<HTMLDivElement>(null);
@@ -29,7 +35,7 @@ export const Layer5 = () => {
       <div className={`${FloorDimensions} relative`}>
         <Image
           src={ChatManAnimated}
-          className="w-[40%] right-[17%]"
+          className="w-[40%] right-[17%] bottom-[15%]"
           style={{
             position: "absolute",
             // width: "30%",
@@ -41,8 +47,8 @@ export const Layer5 = () => {
         />
 
         <Image
-          src={Layer29}
-          className="w-[17%] bottom-[5%] left-[15%]"
+          src={SlideWomen}
+          className="w-[50%] bottom-[-4%] left-[4%]"
           style={{
             position: "absolute",
             // width: "17%",
@@ -53,7 +59,7 @@ export const Layer5 = () => {
           alt=""
         />
 
-        <Image
+        {/* <Image
           src={Layer30}
           style={{
             position: "absolute",
@@ -64,10 +70,10 @@ export const Layer5 = () => {
           }}
           className="w-[7%] bottom-[15%] left-[20%]"
           alt=""
-        />
+        /> */}
 
         <Image
-          src={Layer30_1}
+          src={ground_floor}
           style={{
             position: "absolute",
             zIndex: 10,

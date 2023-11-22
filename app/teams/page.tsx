@@ -21,7 +21,7 @@ import {
   Woman,
 } from "@/assets/images";
 import Image from "next/image";
-import { ClockAnimated, StandingManAnimated } from "@/assets";
+import { ClockAnimated, RotatingGirl, StandingManAnimated } from "@/assets";
 
 const Teams = () => {
   var settings = {
@@ -131,14 +131,13 @@ const Teams = () => {
           alt={""}
           className="absolute top-[10%] z-10 aspect-auto right-[10%] w-[50px] sm:w-[60px] lg:w-[80px]"
         />
-
+        <Image
+          src={RotatingGirl}
+          alt={""}
+          className="absolute z-20 bottom-[5%] md:bottom-[13%] lg:bottom-[20%] right-[5%]  aspect-auto w-[35%] md:w-[30%] lg:w-[20%]"
+        />
         <div className="absolute z-20 bottom-5 md:bottom-[10%]  right-[10%] ">
           <div className="relative w-[200px] sm:w-[250px] md:w-[400px] lg:w-[600px]">
-            <Image
-              src={Woman}
-              alt={""}
-              className="absolute z-20 bottom-14 right-0  aspect-auto w-[50px] sm:w-[60px] md:w-[70px] lg:w-[100px]"
-            />
             <Image
               src={Vector_Smart_Object_Teams}
               alt={""}

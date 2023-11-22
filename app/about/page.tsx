@@ -1,4 +1,8 @@
-import { OculusManAnimated, RobotCatAnimated } from "@/assets";
+import {
+  BillBoard_Animated,
+  OculusManAnimated,
+  RobotCatAnimated,
+} from "@/assets";
 import {
   Billboard,
   Cloud1,
@@ -14,7 +18,7 @@ import { Clouds } from "@/utils/Clouds";
 import Image from "next/image";
 import { Kenia } from "next/font/google";
 
-const roboto = Kenia({
+const kenia = Kenia({
   weight: "400",
   subsets: ["latin"],
 });
@@ -52,18 +56,14 @@ const About = () => {
           className="absolute top-[40%] object-contain left-[20%] h-[400px] "
         /> */}
         <Clouds />
+        <Image
+          src={BillBoard_Animated}
+          alt={""}
+          className="absolute bottom-[4%] md:bottom-[5%] xl:bottom-0 z-20 aspect-auto left-[-4%] w-[60%] md:w-[50%]"
+        />
+
         <div className="absolute bottom-0 left-0 ">
           <div className="relative w-[250px] sm:w-[300px] md:w-[400px] lg:w-[600px] h-[350px] sm:h-[500px] md:h-[600px] lg:h-[800px]">
-            <Image
-              src={Layer19_1}
-              alt={""}
-              className="absolute bottom-[10%] z-20 aspect-auto left-[30%] w-[35px] sm:w-[50px] md:w-[70px] lg:w-[80px]"
-            />
-            <Image
-              src={Layer20}
-              alt={""}
-              className="absolute bottom-[33%] aspect-auto left-[45%] w-[50px] md:w-[60px] lg:w-[90px] animate-pulse"
-            />
             <Image
               src={Layer10}
               alt={""}
@@ -73,7 +73,7 @@ const About = () => {
         </div>
         <div className="flex justify-center items-center">
           <h1
-            className={`text-center text-[25px] md:text-[35px] lg:text-[50px] font-bold font-sans ${roboto.className}`}
+            className={`text-center text-[25px] md:text-[35px] lg:text-[50px] font-bold font-sans ${kenia.className}`}
           >
             Elevate Your Digital Dreams with Mod.Ventures
             <br /> Where Innovation Takes Flight!
